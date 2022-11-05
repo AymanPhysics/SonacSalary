@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="RPT1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="350.104" d:DesignWidth="843.236">
+    <Grid Background="{DynamicResource Bg}">
+        <Grid Name="GridBackground" Margin="12,12,12,53">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FF8DD8A4" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <CheckBox Content="" Height="16" HorizontalAlignment="Center" Margin="106,90,428,49" Name="CheckBox1" VerticalAlignment="Center" Width="120" Visibility="Hidden" TabIndex="2" />
+            <Image Height="119" HorizontalAlignment="Center" Margin="455,19,99,53" Name="Image1" Source="/SonacSalary;component/Images/no.photo.gif" Stretch="Fill" VerticalAlignment="Center" Width="100" Visibility="Hidden" />
+            <Button Content="Change" HorizontalAlignment="Center"  Name="btnSetImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,40,13,112">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Cancel" HorizontalAlignment="Center"  Name="btnSetNoImage" TabIndex="35" VerticalAlignment="Center" Width="82" Visibility="Hidden" Margin="559,81,13,55">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#B4FF0000" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="من تاريخ" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="106,152,593,105" x:Name="lblFromDate" UseLayoutRounding="True" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <DatePicker FirstDayOfWeek="Saturday" Height="28" Margin="232,152,458,105" x:Name="FromDate" TabIndex="5" Width="129" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="إلى تاريخ" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="393,152,306,105" x:Name="lblToDate" UseLayoutRounding="True" Width="120" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <DatePicker FirstDayOfWeek="Saturday" Height="28" Margin="519,152,171,105" x:Name="ToDate" TabIndex="6" Width="129" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="320,88,281,169" MaxLength="100" x:Name="StationName" TabIndex="1" Width="218" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="المحطة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="106,88,593,169" x:Name="lblDepartmentId" UseLayoutRounding="True" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="232,88,509,169" MaxLength="10" x:Name="StationId" TabIndex="0" Width="78" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <TextBox AutoWordSelection="True" Height="28" IsReadOnly="True" IsTabStop="False" Margin="320,121,281,136" MaxLength="100" x:Name="ItemName" TabIndex="1" Width="218" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+            <Label BorderBrush="#FF078200" BorderThickness="1" Content="الكرتونة" Foreground="#FF078200" Height="28" HorizontalContentAlignment="Center" Margin="106,121,593,136" x:Name="lblItemId" UseLayoutRounding="True" Width="120" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            <TextBox AutoWordSelection="True" Height="28" Margin="232,121,509,136" MaxLength="10" x:Name="ItemId" TabIndex="1" Width="78" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBox.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#37FFFF00" Offset="1" />
+                    </LinearGradientBrush>
+                </TextBox.Background>
+            </TextBox>
+        </Grid>
+        <Button  Content="عرض التقريــــــــــــــر" HorizontalAlignment="Center"  x:Name="Button2" TabIndex="20" VerticalAlignment="Bottom"  Width="380" Margin="245,0,218,4" Style="{StaticResource GlossyCloseButton}" Height="44" Foreground="Black" Background="{DynamicResource BgSave}" />
+    </Grid>
+</UserControl>
